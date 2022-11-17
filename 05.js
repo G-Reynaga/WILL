@@ -14,6 +14,10 @@ function pluck(array, propiedad) {
   // Pista: es una buena oportunidad para usar map.
 
   // Tu código acá:
+  newArray = array.map((i) =>{ // el map crae un nuevo arreglo con la solicitud de el elemento [i] que desees
+    return i[propiedad] // aqui le decimos que nos retorne y buscque con el metodo map la I (iterator) y dentro del array pidiendo el nombre de la propiedad
+  })
+  return newArray // aqui retornamos el nuevo arreglo con el metodo map.
 
 }
 

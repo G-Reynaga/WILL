@@ -25,6 +25,21 @@ function filtrar(funcion) {
   //   return p.price >= 50;
   // }) => [{price: 100, name:'tv'}]
 
+  // aqui definimos nuevo metodo filtar la cual llama a una funcion (cb) --> que esa funcion devuelve el nombre del producto y el precio
+  Array.prototype.filtrar = function(cb){
+    // aqui creamos una variable con un arreglo vacio para que se llene al final
+    newArrary = []
+    //aqui realizamos un bucle foreach que indica que el valor Item que seria iterador que se presente haga chequeo de
+    this.forEach(item =>{
+      // una condicional que dice si en la funcion callback que estamos llamando esta dentro ese item pusheame al nuevo arreglo el item
+      if(cb(item)){
+        //si es true o verdadero pusheame
+        newArrary.push(item)
+      }
+    })
+    // aqui devolvemos el item al nuevo array para mostrar resultado
+    return newArrary
+  }
 };
 
 // No modifiques nada debajo de esta linea //

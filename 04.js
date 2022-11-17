@@ -5,6 +5,8 @@
   No comentar la funcion 
 */
 
+
+
 function numeroSimetrico(num) {
   // La funcion llamada 'numeroSimetrico' recibe como argumento un numero entero 'num'
   // Esta devuelve true o false dependiendo de si el número es simétrico o no. 
@@ -14,7 +16,19 @@ function numeroSimetrico(num) {
 
   // Tu código:
 
+  var numToString = String(num)
+  var numAlReves = '';
+
+  for (let i = numToString.length - 1; i >= 0; i--) {
+    numAlReves = numAlReves + numToString[i];
+  }if (numAlReves === numToString) {
+    return true;
+  } else {
+    return false;
+  }
 }
+
+
 
 // No modifiques nada debajo de esta linea //
 
